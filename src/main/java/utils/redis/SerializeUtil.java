@@ -1,4 +1,4 @@
-package utils;
+package utils.redis;
 
 import org.codehaus.jackson.JsonGenerator;
 import org.codehaus.jackson.JsonNode;

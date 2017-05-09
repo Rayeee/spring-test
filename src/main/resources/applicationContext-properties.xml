@@ -8,6 +8,7 @@
         <property name="locations">
             <list>
                 <value>classpath:log4j.properties</value>
+                <value>classpath:redis.properties</value>
             </list>
         </property>
     </bean>

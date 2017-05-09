@@ -1,4 +1,4 @@
-package com;
+package bean;
 
 /**
  * Created by zhugongyi on 2017/4/27.

@@ -1,4 +1,4 @@
-import com.ConstractorArg;
+import bean.ConstractorArg;
 import org.apache.log4j.Logger;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

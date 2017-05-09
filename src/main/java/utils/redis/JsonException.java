@@ -1,4 +1,4 @@
-package utils;
+package utils.redis;
 
 /**
  * Created by zhugongyi on 2017/5/9.
