@@ -119,7 +119,7 @@ public class ClientCloud {
         //首次握手
         Socket firstShake = new Socket("127.0.0.1", 9000);
         ObjectOutputStream o1 = new ObjectOutputStream(firstShake.getOutputStream());
-        o1.writeObject(new ShakeHand(account, my_host, my_port));
+        o1.writeObject(new ShakeHandDto(account, my_host, my_port));
         o1.flush();
         o1.close();
         firstShake.close();

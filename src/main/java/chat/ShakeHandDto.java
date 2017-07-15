@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * Created by zhugongyi on 2017/7/12.
  */
-public class ShakeHand implements Serializable {
+public class ShakeHandDto implements Serializable {
 
     private String account;
 
@@ -13,11 +13,11 @@ public class ShakeHand implements Serializable {
 
     private int port;
 
-    public ShakeHand() {
+    public ShakeHandDto() {
 
     }
 
-    public ShakeHand(String account, String host, int port) {
+    public ShakeHandDto(String account, String host, int port) {
         this.account = account;
         this.host = host;
         this.port = port;
@@ -49,7 +49,7 @@ public class ShakeHand implements Serializable {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("ShakeHand{");
+        final StringBuilder sb = new StringBuilder("ShakeHandDto{");
         sb.append("account='").append(account).append('\'');
         sb.append(", host='").append(host).append('\'');
         sb.append(", port=").append(port);

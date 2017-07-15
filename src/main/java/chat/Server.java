@@ -74,17 +74,17 @@ public class Server {
 
     //首次握手，注册用户信息（account，host，port）
     private static boolean processFirstShake(Object object) {
-        if (object instanceof ShakeHand) {
-            ShakeHand shakeHand = (ShakeHand) object;
-            System.out.println("server 获取连接..." + shakeHand.toString());
-            if (clientMap.get(shakeHand.getAccount()) == null) {
+        if (object instanceof ShakeHandDto) {
+            ShakeHandDto shakeHandDto = (ShakeHandDto) object;
+            System.out.println("server 获取连接..." + shakeHandDto.toString());
+            if (clientMap.get(shakeHandDto.getAccount()) == null) {
                 Set<Address> set = new HashSet<>();
-                set.add(new Address(shakeHand.getHost(), shakeHand.getPort()));
-                clientMap.put(shakeHand.getAccount(), set);
+                set.add(new Address(shakeHandDto.getHost(), shakeHandDto.getPort()));
+                clientMap.put(shakeHandDto.getAccount(), set);
             } else {
-                for (Address address : clientMap.get(shakeHand.getAccount())) {
-                    if (!shakeHand.getHost().equals(address.getHost()) || shakeHand.getPort() != address.getPort()) {
-                        clientMap.get(shakeHand.getAccount()).add(new Address(shakeHand.getHost(), shakeHand.getPort()));
+                for (Address address : clientMap.get(shakeHandDto.getAccount())) {
+                    if (!shakeHandDto.getHost().equals(address.getHost()) || shakeHandDto.getPort() != address.getPort()) {
+                        clientMap.get(shakeHandDto.getAccount()).add(new Address(shakeHandDto.getHost(), shakeHandDto.getPort()));
                     }
                 }
             }
