@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
+import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.*;
@@ -21,7 +22,8 @@ public class Server {
     private static final int server_port = 9000;
 
     public static void main(String[] args) throws IOException , ClassNotFoundException{
-        ServerSocket serverSocket = new ServerSocket(server_port);
+        ServerSocket serverSocket = new ServerSocket();
+        serverSocket.bind(new InetSocketAddress(server_port));
         for (; ; ) {
             Socket socket = serverSocket.accept();
             ObjectInputStream inputStream = new ObjectInputStream(socket.getInputStream());
