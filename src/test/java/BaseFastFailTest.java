@@ -10,7 +10,7 @@ import javax.annotation.Resource;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = "classpath:applicationContext.xml")
-public class BaseTest {
+public class BaseFastFailTest {
 
     @Resource
     protected RedisClient redisClient;

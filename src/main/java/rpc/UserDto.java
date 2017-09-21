@@ -16,6 +16,17 @@ public class UserDto implements Serializable {
 
     private Date birthday;
 
+    public UserDto() {
+
+    }
+
+    public UserDto(Integer id, String name, Integer gender, Date birthday) {
+        this.id = id;
+        this.name = name;
+        this.gender = gender;
+        this.birthday = birthday;
+    }
+
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("UserDto{");
